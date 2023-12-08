@@ -22,10 +22,12 @@ SaaS
 Para este hackathon nos enfocamos en el producto de cara a las usuarias/os individuales que es la calculadora de rango salarial.
 
 ## Parametros:
-Salario
-Rol (acotar a los puestos más comunes)
-Seniority: años de experiencia (todos los seniorities)
-Tech stack
-Tipos de empresa: startup, en crecimiento, grandes.
-Ubicación
-Idiomas
+- Salario neto
+- Rol (acotar a los puestos más comunes)
+- Seniority: años de experiencia (todos los seniorities)
+- Tech stack
+- Tipos de empresa: startup, en crecimiento, grandes.
+- Ubicación
+- Idiomas
+- Nivel educativo
+- Horas trabajadas o jornada laboral
