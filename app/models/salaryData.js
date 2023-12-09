@@ -15,7 +15,7 @@ const SalaryData = db.define(
     english: {
       type: DataTypes.BOOLEAN,
     },
-    seniority_groups: {
+    seniority_group: {
       type: DataTypes.INTEGER,
     },
     max_salary: {
