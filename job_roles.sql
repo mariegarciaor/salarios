@@ -1,4 +1,4 @@
-create table job_roles as
-select distinct job_role from brechacero.salaries;
+CREATE TABLE job_roles AS
+SELECT DISTINCT job_role FROM brechacero.salaries;
 
-select * from brechacero.salaries;
+SELECT * FROM brechacero.salaries;
