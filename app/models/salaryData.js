@@ -4,7 +4,7 @@ const db = require("../util/database");
 const SalaryData = db.define(
   "salaryData",
   {
-    id: {
+    salary_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -15,7 +15,7 @@ const SalaryData = db.define(
     english: {
       type: DataTypes.BOOLEAN,
     },
-    seniority_groups: {
+    seniority_group: {
       type: DataTypes.INTEGER,
     },
     max_salary: {
