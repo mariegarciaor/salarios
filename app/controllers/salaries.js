@@ -25,52 +25,64 @@ exports.getOne = async (req, res, next) => {
   }
 };
 
-exports.createOne = async (req, res, next) => {
-  try {
-    const SALARY_MODEL = {
-      role: req.body.role,
-      email: req.body.email,
-      password: req.body.password,
-    };
+// exports.createOne = async (req, res, next) => {
+//   try {
+//     const SALARY_MODEL = {
+//       net_salary: req.body.net_salary,
+//       job_role: req.body.job_role,
+//       seniority_in_years: req.body.seniority_in_years,
+//       tech_stack: req.body.tech_stack,
+//       company_size: req.body.company_size,
+//       location: req.body.location,
+//       english: req.body.english,
+//       max_education_level: req.body.max_education_level,
+//       working_hours_per_week: req.body.working_hours_per_week,
+//     };
 
-    const salary = await Salary.create(SALARY_MODEL);
-    handleResponse(res, salary);
-  } catch (error) {
-    handleResponse(res, error);
-  }
-};
+//     const salary = await Salary.create(SALARY_MODEL);
+//     handleResponse(res, salary);
+//   } catch (error) {
+//     handleResponse(res, error);
+//   }
+// };
 
-exports.updateOne = async (req, res, next) => {
-  try {
-    const SALARY_MODEL = {
-      role: req.body.role,
-      email: req.body.email,
-      password: req.body.password,
-    };
+// exports.updateOne = async (req, res, next) => {
+//   try {
+//     const SALARY_MODEL = {
+//       net_salary: req.body.net_salary,
+//       job_role: req.body.job_role,
+//       seniority_in_years: req.body.seniority_in_years,
+//       tech_stack: req.body.tech_stack,
+//       company_size: req.body.company_size,
+//       location: req.body.location,
+//       english: req.body.english,
+//       max_education_level: req.body.max_education_level,
+//       working_hours_per_week: req.body.working_hours_per_week,
+//     };
 
-    const [updatedRows] = await Salary.update(SALARY_MODEL, {
-      where: { id: req.params.id },
-    });
-    if (updatedRows === 0) {
-      return handleResponse(res, new Error("Usuario no encontrado"));
-    }
+//     const [updatedRows] = await Salary.update(SALARY_MODEL, {
+//       where: { id: req.params.id },
+//     });
+//     if (updatedRows === 0) {
+//       return handleResponse(res, new Error("Usuario no encontrado"));
+//     }
 
-    handleResponse(res, { message: "Usuario actualizado exitosamente" });
-  } catch (error) {
-    handleResponse(res, error);
-  }
-};
+//     handleResponse(res, { message: "Usuario actualizado exitosamente" });
+//   } catch (error) {
+//     handleResponse(res, error);
+//   }
+// };
 
-exports.deleteOne = async (req, res, next) => {
-  try {
-    const deletedRows = await Salary.destroy({ where: { id: req.params.id } });
+// exports.deleteOne = async (req, res, next) => {
+//   try {
+//     const deletedRows = await Salary.destroy({ where: { id: req.params.id } });
 
-    if (deletedRows === 0) {
-      return handleResponse(res, new Error("Usuario no encontrado"));
-    }
+//     if (deletedRows === 0) {
+//       return handleResponse(res, new Error("Usuario no encontrado"));
+//     }
 
-    handleResponse(res, { message: "Usuario eliminado exitosamente" });
-  } catch (error) {
-    handleResponse(res, error);
-  }
-};
+//     handleResponse(res, { message: "Usuario eliminado exitosamente" });
+//   } catch (error) {
+//     handleResponse(res, error);
+//   }
+// };

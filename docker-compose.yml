@@ -8,12 +8,8 @@ services:
       context: .
     ports:
       - "3001:3001"
-    environment:
-      - EXTERNAL_PORT=3001
-      - MYSQL_DATABASE=brecha-cero-latam-backend_db
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=krKdU]t{Q_9xY*T(
-      - MYSQL_HOST=34.68.51.143
+    env_file:
+      - .env
     depends_on:
       - node_db
   node_db:
@@ -21,9 +17,8 @@ services:
     image: "mysql:8"
     ports:
       - "3307:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=brecha-cero-latam-backend_db
+    env_file:
+      - .env
     volumes:
       - nps_data:/var/lib/mysql
 

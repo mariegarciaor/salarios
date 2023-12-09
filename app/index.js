@@ -11,11 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   res.setHeader("Access.Control-Allow-Origin", "*");
   res.setHeader(
-    "Access-Control-Allow-Methlods",
-    "GET",
-    "POST",
-    "PUT",
-    "DELETE"
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE"
   );
   next();
 });
@@ -28,7 +25,7 @@ app.use("/salaries", require("./routes/salaries"));
     await sequelize.sync({ force: false }); 
 
     console.log("test");
-    app.listen(process.env.EXTERNAL_PORT || 3000);
+    app.listen(process.env.PORT || 3000);
   } catch (error) {
     console.log(error);
   }
