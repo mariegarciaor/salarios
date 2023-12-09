@@ -25,7 +25,7 @@ app.use("/salaries", require("./routes/salaries"));
     await sequelize.sync({ force: false }); 
 
     console.log("test");
-    app.listen(process.env.EXTERNAL_PORT || 3000);
+    app.listen(process.env.PORT || 3000);
   } catch (error) {
     console.log(error);
   }

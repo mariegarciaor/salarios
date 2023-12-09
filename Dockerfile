@@ -1,10 +1,10 @@
-FROM node:14
+FROM node:16
 
-EXPOSE 3001
+EXPOSE 80
+
+ENV PORT=80
 
 WORKDIR /src
-
-RUN npm install i npm
 
 COPY package.json package-lock*.json ./
 
