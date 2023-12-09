@@ -19,6 +19,7 @@ app.use((req, res, next) => {
 
 app.use("/dev", require("./routes/dev"));
 app.use("/salaries", require("./routes/salaries"));
+app.use("/salariesData", require("./routes/salariesData"));
 
 (async () => {
   try {
